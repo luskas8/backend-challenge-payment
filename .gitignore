@@ -36,6 +36,7 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
+build/
 build/Release
 
 # Dependency directories
@@ -121,6 +122,8 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+.vscode
+!.vscode/tasks.js
 
 # yarn v2
 .yarn/cache
@@ -128,3 +131,12 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# JetBrains IDEs
+.idea/
+
+# Optional npm cache directory
+.npm
+
+# Misc
+.DS_Store
