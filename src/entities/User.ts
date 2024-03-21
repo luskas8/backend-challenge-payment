@@ -11,7 +11,7 @@ export class User {
     this.password = password;
   }
 
-  create(username: string, password: string): User {
+  static create(username: string, password: string): User {
     // create user
     return new User(username, password);
   }

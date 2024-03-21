@@ -1,6 +1,6 @@
 import { User } from '../entities/User.js';
 
-export abstract class UserAdapter {
+export abstract class UserRepository {
   abstract save(user: User): User;
   abstract update(data: User): boolean;
   abstract delete(id: string): void;

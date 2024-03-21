@@ -8,7 +8,7 @@ export interface CreateUserRequest {
 export interface CreateUserResponse {
   success: boolean;
   message: string;
-  user: User;
+  user: Omit<User, 'password'>;
 }
 
 export abstract class CreateUserUseCase {

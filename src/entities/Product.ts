@@ -19,7 +19,7 @@ export class Product {
     this.date = args.date;
   }
 
-  create(args: Omit<Product, 'id'>): Product {
+  static create(args: Omit<Product, 'id'>): Product {
     // create product
     return new Product(args);
   }

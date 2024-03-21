@@ -22,7 +22,7 @@ export class Transaction {
     this.created_at = new Date();
   }
 
-  create(args: Omit<Transaction, 'id'>): Transaction {
+  static create(args: Omit<Transaction, 'id'>): Transaction {
     // create transaction
     return new Transaction(args);
   }
