@@ -1,12 +1,12 @@
-import { AuthenticateUserUseCaseImpl } from "../../src/usecases/AuthenticateUserUseCaseImpl.js";
+import { AuthenticateUserUseCaseImpl } from "../../src/usecases/User/AuthenticateUserUseCase.js";
 import { InMemoryUserRepository } from "../../src/repositories/InMemory/UserRepositoryImpl.js";
-import { CreateUserUseCaseImpl } from "../../src/usecases/CreateUserCaseImpl.js";
+import { CreateUserUseCase } from "../../src/usecases/User/CreateUserCase.js";
 
 describe('Create Use Cases', () => {
     it('should create a new user', () => {
         // Arrange
         const userRepository = new InMemoryUserRepository();
-        const createUserUseCase = new CreateUserUseCaseImpl(userRepository);
+        const createUserUseCase = new CreateUserUseCase(userRepository);
         const authenticateUserUseCase = new AuthenticateUserUseCaseImpl(userRepository);
         const userRequest = {
             username: 'user1',
